@@ -29,7 +29,7 @@ function MostrarFilmesCinema( ){
                     <div class="card-body">
                       <h5 class="card-title">${titulo}</h5>
                       <p class="card-text">${descricao}</p>
-                      <a href="https://www.themoviedb.org/movie/${id}-${titulo}" target="_blank" id="buttonc1" class="btn btn-primary">Saiba Mais</a>
+                      <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${i}); sessionStorage.setItem('endp', 'now_playing')">Saiba Mais</a>
                     </div>
                     </div>`;
         }
@@ -70,7 +70,7 @@ function MostrarFilmesNovidade( ){
                 <div class="card-body">
                     <h5 class="card-title">${titulo}</h5>
                     <p class="card-text">${descricao}</p>
-                    <a href="https://www.themoviedb.org/movie/${id}-${titulo}" target="_blank" id="buttonc1" class="btn btn-primary">Saiba Mais</a>
+                    <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${i}); sessionStorage.setItem('endp', 'latest')">Saiba Mais</a>
                 </div>
             </div>
         </div>`;

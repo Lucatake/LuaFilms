@@ -35,7 +35,7 @@ function MostrarFilmesPop( ){
               <div class="card-body">
                 <h2 class="card-title">${titulo}</h2>
                 <p class="card-text">${descricao}</p>
-                <a href="https://www.themoviedb.org/movie/${id}-${titulo}" target="_blank" id="buttonc1" class="btn btn-primary">Saiba Mais</a>
+                <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${i}); sessionStorage.setItem('endp', 'popular')">Saiba Mais</a>
               </div>
             </div>
           </div>
@@ -84,13 +84,13 @@ function MostrarFilmesCin( ){
               <div class="card-body">
                 <h2 class="card-title">${titulo}</h2>
                 <p class="card-text">${descricao}</p>
-                <a href="https://www.themoviedb.org/movie/${id}-${titulo}" target="_blank" id="buttonc1" class="btn btn-primary">Saiba Mais</a>
+                <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${i}); sessionStorage.setItem('endp', 'now_playing')">Saiba Mais</a>
               </div>
             </div>
           </div>
         </div>`;
       }
-          
+         
       // Repassar os cards para a página
       $('#pop').html(codigo_html);
       $("#titulo_session").html(titulo_html);
@@ -102,7 +102,7 @@ function MostrarFilmesNovi( ){
   //executar AJAX
   
   $.ajax({
-      // Passar a URL ENDPOINT BASE + /movie/latest
+      // Passar a URL ENDPOINT BASE + /movie/now_playing
       url: TMDB_ENDPOINT_BASE + '/movie/latest',
       data: {
           api_key: 'c2f4c89b537808c194cac27dae3a091e'
@@ -132,7 +132,7 @@ function MostrarFilmesNovi( ){
               <div class="card-body">
                 <h2 class="card-title">${titulo}</h2>
                 <p class="card-text">${descricao}</p>
-                <a href="https://www.themoviedb.org/movie/${id}-${titulo}" target="_blank" id="buttonc1" class="btn btn-primary">Saiba Mais</a>
+                <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${i}); sessionStorage.setItem('endp', 'latest')">Saiba Mais</a>
               </div>
             </div>
           </div>
@@ -158,4 +158,5 @@ $(document).ready(function () {
   if(sessionStorage.getItem("cin") == "true") {MostrarFilmesCin();};
   $("#onnovi").click(function () {sessionStorage.setItem("novi", true); sessionStorage.setItem("pop", false); sessionStorage.setItem("cin", false);});
   if(sessionStorage.getItem("novi") == "true") {MostrarFilmesNovi();};
+
 });

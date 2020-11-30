@@ -32,7 +32,7 @@ ul {
 }
 
 li {
-  float: right;
+  float: left;
 }
 
 li a {
@@ -40,11 +40,12 @@ li a {
   color: white;
   font-weight: bolder;
   text-align: center;
-  padding: 30px;
+  padding: 10px;
   text-decoration: none;
   font-size: 18px;
-  margin-top: 100px;
-  margin-left: 100px;
+  margin-top: 50px;
+  margin-left: 10px;
+  overflow-wrap: normal;
 }
 
 li a:hover {
