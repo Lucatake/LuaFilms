@@ -1,4 +1,4 @@
-html{ height: 100%; overflow-x: hidden;}
+html{ height: 100%; overflow-x: hidden!important;}
 
 body, main, ul, li, p, section, article, aside{
     margin: 0px;
@@ -127,6 +127,7 @@ button.btn {float: right; background-color: rgb(1, 107, 156); color: white; marg
 /*Media Queries*/
 @media screen and (max-width:600px){
 /*header*/
+html{ height: 120%; overflow-x: hidden!important;}
     .header{
         display: absolute;
         padding: 15px;
@@ -137,7 +138,8 @@ button.btn {float: right; background-color: rgb(1, 107, 156); color: white; marg
         background-position: 0px -10px;
         position: fixed;
         top: 0px;
-        width: 100%;
+        left: -22px;
+        width: 110%;
         height: 150px;
         z-index: 999;
         background-repeat: no-repeat;
@@ -167,6 +169,8 @@ button.btn {float: right; background-color: rgb(1, 107, 156); color: white; marg
         -ms-transition: height 0.3s;
         -o-transition: height 0.3s;
         transition: height 0.3s;
+        left: -25px;
+        width: 110%;
     }
     .menuT li {
         display: block;
@@ -191,7 +195,7 @@ button.btn {float: right; background-color: rgb(1, 107, 156); color: white; marg
         right: 30px;
         line-height: 60px;
         color: white;
-        z-index: 999;
+        z-index: 99999;
     }
     #menuToggle:checked ~ label.menu-icon i:nth-child(2) {
         display: block;
@@ -304,6 +308,7 @@ button.btn {float: right; background-color: rgb(1, 107, 156); color: white; marg
 }
 
 @media screen and (min-width:601px) and (max-width:1023px){
+
 /*header*/
         .header{
             display: absolute;
@@ -314,7 +319,8 @@ button.btn {float: right; background-color: rgb(1, 107, 156); color: white; marg
             background-size: cover;
             background-position: 0px -90px;
             color: white;
-            width: 100%;
+            left: -22px;
+            width: 110%;
             height: 200px;
             top: 0px;
             background-repeat: no-repeat;
@@ -349,6 +355,9 @@ button.btn {float: right; background-color: rgb(1, 107, 156); color: white; marg
             -ms-transition: height 0.3s;
             -o-transition: height 0.3s;
             transition: height 0.3s;
+            left: -25px;
+            width: 100%;
+            overflow-x: hidden!important;
         }
         .menuT li {
             display: block;
@@ -373,7 +382,7 @@ button.btn {float: right; background-color: rgb(1, 107, 156); color: white; marg
             right: 30px;
             line-height: 60px;
             color: white;
-            z-index: 999;
+            z-index: 99999;
         }
         #menuToggle:checked ~ label.menu-icon i:nth-child(2) {
             display: block;
