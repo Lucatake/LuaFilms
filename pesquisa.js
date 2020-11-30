@@ -40,6 +40,7 @@ $(document).ready(function () {
         }
         // Repassar os cards para a página
         $("#pes").html(codigo_html);
+        sessionStorage.setItem("item", "");
       });
   }
 
