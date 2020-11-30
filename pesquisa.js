@@ -2,7 +2,7 @@ sessionStorage.setItem("isPesquisa", true);
 const TMDB_ENDPOINT_BASE = 'https://api.themoviedb.org/3';
 $(document).ready(function () {
   //sessionStorage.setItem("isPesquisa", true);
-  if (sessionStorage.getItem("isPesquisa")) {
+  if (sessionStorage.getItem("isPesquisa") == "true") {
     $.ajax({
       // Passar a URL ENDPOINT BASE + /movie/now_playing
       url: TMDB_ENDPOINT_BASE + "/search/movie",
