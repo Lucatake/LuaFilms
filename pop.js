@@ -45,7 +45,7 @@ function MostrarFilmesPop( ){
       // Repassar os cards para a página
       $('#pop').html(codigo_html);
       $("#titulo_session").html(titulo_html);
-      sessionStorage.setItem("pop", false);
+      
   });
 }//end funcao MostrarFilmesPop
 
@@ -94,13 +94,12 @@ function MostrarFilmesCin( ){
       // Repassar os cards para a página
       $('#pop').html(codigo_html);
       $("#titulo_session").html(titulo_html);
-      sessionStorage.setItem("cin", false);
   });
 }//end funcao MostrarFilmesCin
 
 $(document).ready(function () {
-  $("#onpopulares").click(function () {sessionStorage.setItem("pop", true); });
+  $("#onpopulares").click(function () {sessionStorage.setItem("pop", true); sessionStorage.setItem("cin", false);});
   if(sessionStorage.getItem("pop") == "true") {MostrarFilmesPop();};
-  $("#oncinema").click(function () {sessionStorage.setItem("cin", true); });
+  $("#oncinema").click(function () {sessionStorage.setItem("cin", true); sessionStorage.setItem("pop", false);});
   if(sessionStorage.getItem("cin") == "true") {MostrarFilmesCin();};
 });
