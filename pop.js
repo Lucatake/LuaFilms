@@ -98,6 +98,12 @@ function MostrarFilmesCin( ){
 }//end funcao MostrarFilmesCin
 
 $(document).ready(function () {
+  $("#btn_pesquisa").click(function () {
+    //sessionStorage.setItem("isPesquisa", true);
+    if (sessionStorage.getItem("isPesquisa")) {
+      sessionStorage.setItem("item", $("#search").val());
+    }
+  });
   $("#onpopulares").click(function () {sessionStorage.setItem("pop", true); sessionStorage.setItem("cin", false);});
   if(sessionStorage.getItem("pop") == "true") {MostrarFilmesPop();};
   $("#oncinema").click(function () {sessionStorage.setItem("cin", true); sessionStorage.setItem("pop", false);});

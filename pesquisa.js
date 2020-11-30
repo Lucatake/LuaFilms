@@ -48,4 +48,10 @@ $(document).ready(function () {
   $("#oncinema").click(function () {sessionStorage.setItem("cin", true);});
   sessionStorage.setItem("cin", false);
   sessionStorage.setItem("pop", false);
+  $("#btn_pesquisa").click(function () {
+    //sessionStorage.setItem("isPesquisa", true);
+    if (sessionStorage.getItem("isPesquisa")) {
+      sessionStorage.setItem("item", $("#search").val());
+    }
+  });
 });
