@@ -46,8 +46,10 @@ $(document).ready(function () {
 
   $("#onpopulares").click(function () {sessionStorage.setItem("pop", true);});
   $("#oncinema").click(function () {sessionStorage.setItem("cin", true);});
+  $("#onnovi").click(function () {sessionStorage.setItem("novi", true);});
   sessionStorage.setItem("cin", false);
   sessionStorage.setItem("pop", false);
+  sessionStorage.setItem("novi", false);
   $("#btn_pesquisa").click(function () {
     //sessionStorage.setItem("isPesquisa", true);
     if (sessionStorage.getItem("isPesquisa")) {
