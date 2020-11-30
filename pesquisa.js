@@ -14,6 +14,7 @@ $(document).ready(function () {
       // Receber o JSON
       .done(function (data) {
         let codigo_html = "";
+        
         // Montar os cards
         for (i = 0; i < data.results.length; i++) {
           // Concatenar o código do Card com os dados do JSON
@@ -41,4 +42,9 @@ $(document).ready(function () {
         $("#pes").html(codigo_html);
       });
   }
+
+  $("#onpopulares").click(function () {sessionStorage.setItem("pop", true);});
+  $("#oncinema").click(function () {sessionStorage.setItem("cin", true);});
+  sessionStorage.setItem("cin", false);
+  sessionStorage.setItem("pop", false);
 });
