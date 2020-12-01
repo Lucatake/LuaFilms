@@ -57,12 +57,12 @@ function MostrarFilmesNovidade( ){
         let codigo_html = '';
         
         // Montar os cards
-        for (i=0; i< 3; i++) {
+        
             // Concatenar o código do Card com os dados do JSON
-            titulo = data.results[i].title;
-            imagem = 'https://image.tmdb.org/t/p/w500' + data.results[i].poster_path;
-            descricao = data.results[i].overview;
-            id = data.results[i].id;
+            titulo = data.title;
+            imagem = 'https://image.tmdb.org/t/p/w200' + data.backdrop_path;
+            descricao = data.overview;
+            id = data.id;
 
             codigo_html += `<div id="CardN" class="card mb-3" style="max-width: 500px;">
             <div class="row no-gutters">
@@ -70,11 +70,11 @@ function MostrarFilmesNovidade( ){
                 <div class="card-body">
                     <h5 class="card-title">${titulo}</h5>
                     <p class="card-text">${descricao}</p>
-                    <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${i}); sessionStorage.setItem('endp', 'latest')">Saiba Mais</a>
+                    <a href="https://www.themoviedb.org/movie/${id}-${titulo}" target="_blank" id="buttonc1" class="btn btn-primary">Saiba Mais</a>
                 </div>
             </div>
         </div>`;
-        }
+        
         // Repassar os cards para a página
         $('#novi').html(codigo_html)
     });

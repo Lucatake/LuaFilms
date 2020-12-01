@@ -116,12 +116,12 @@ function MostrarFilmesNovi( ){
       let titulo_html = "";
         titulo_html += `<h1 class="lançamento" >NOVIDADES</h1>`;
       // Montar os cards
-      for (i=0; i< 10; i++) {
+      for (i=0; i< 1; i++) {
           // Concatenar o código do Card com os dados do JSON
-          titulo = data.results[i].title;
-          imagem = 'https://image.tmdb.org/t/p/w500' + data.results[i].poster_path;
-          descricao = data.results[i].overview;
-          id = data.results[i].id;
+          titulo = data.title;
+          imagem = 'https://image.tmdb.org/t/p/w500' + data.poster_path;
+          descricao = data.overview;
+          id = data.id;
 
           codigo_html += `<div class="card mb-3" style="max-width: 700px;">
           <div class="row no-gutters">
@@ -132,7 +132,7 @@ function MostrarFilmesNovi( ){
               <div class="card-body">
                 <h2 class="card-title">${titulo}</h2>
                 <p class="card-text">${descricao}</p>
-                <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${i}); sessionStorage.setItem('endp', 'latest')">Saiba Mais</a>
+                <a href="https://www.themoviedb.org/movie/${id}-${titulo}" target="_blank" id="buttonc1" class="btn btn-primary">Saiba Mais</a>
               </div>
             </div>
           </div>
