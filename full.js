@@ -29,6 +29,7 @@ function Expandido(endp,i){
           id = data.results[i].id;
           lancamento = data.results[i].release_date;
           pop = data.results[i].popularity;
+          av_glob = data.results[i].vote_average;
 
           codigo_html += `<div class="card mb-3" style="max-width: 700px;">
           <div class="row no-gutters">
@@ -38,9 +39,10 @@ function Expandido(endp,i){
             <div class="col-md-8">
               <div class="card-body">
                 <h2 class="card-title">${titulo} (${lancamento})</h2>
-                <h3 class="card-title">Título Original: ${titulo_origi}    Idioma Original: ${lingua_origi}</h3>
+                <h3 class="card-title">Título Original: ${titulo_origi}</br>Idioma Original: ${lingua_origi}</h3>
                 <p class="card-text">Popularidade: ${pop}</p>
                 <p class="card-text">Sinopse: ${descricao}</p>
+                <p class="card-text">Avaliações: ${av_glob}</p>
                 <a href="https://www.themoviedb.org/movie/${id}-${titulo}" target="_blank" id="buttonc1" class="btn btn-primary">Saiba Mais</a>
               </div>
             </div>

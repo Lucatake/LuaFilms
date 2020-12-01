@@ -110,6 +110,7 @@ function MostrarFilmesPopulares( ){
                           <div class="carousel-caption d-none d-md-block" id="descricaopop">
                             <h2>${data.results[0].title}</h2>
                             <p id="descricaopoptxt">${data.results[0].overview}</p>
+                            <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${0}); sessionStorage.setItem('endp', 'popular')">Saiba Mais</a>
                           </div>
                         </div>
                         <div class="carousel-item">
@@ -117,6 +118,7 @@ function MostrarFilmesPopulares( ){
                           <div class="carousel-caption d-none d-md-block" id="descricaopop"> 
                             <h2>${data.results[1].title}</h2>
                             <p id="descricaopoptxt">${data.results[1].overview}</p>
+                            <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${1}); sessionStorage.setItem('endp', 'popular')">Saiba Mais</a>
                           </div>
                         </div>
                         <div class="carousel-item">
@@ -124,6 +126,7 @@ function MostrarFilmesPopulares( ){
                           <div class="carousel-caption d-none d-md-block" id="descricaopop">
                             <h2>${data.results[2].title}</h2>
                             <p id="descricaopoptxt">${data.results[2].overview}</p>
+                            <a href="full.html"  id="buttonc1" class="btn btn-primary" onclick="sessionStorage.setItem('id', ${2}); sessionStorage.setItem('endp', 'popular')">Saiba Mais</a>
                           </div>
                         </div>
                       <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">

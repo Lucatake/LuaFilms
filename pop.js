@@ -102,7 +102,7 @@ function MostrarFilmesNovi( ){
   //executar AJAX
   
   $.ajax({
-      // Passar a URL ENDPOINT BASE + /movie/now_playing
+      // Passar a URL ENDPOINT BASE + /movie/latest
       url: TMDB_ENDPOINT_BASE + '/movie/latest',
       data: {
           api_key: 'c2f4c89b537808c194cac27dae3a091e'
