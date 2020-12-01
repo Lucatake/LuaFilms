@@ -57,7 +57,6 @@ function MostrarFilmesNovidade( ){
         let codigo_html = '';
         
         // Montar os cards
-        
             // Concatenar o código do Card com os dados do JSON
             titulo = data.title;
             imagem = 'https://image.tmdb.org/t/p/w200' + data.backdrop_path;
